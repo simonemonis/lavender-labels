@@ -1,0 +1,52 @@
+header {
+  background-color: var(--lavender);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo a {
+  font-family: var(--heading-font);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+/* Center Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: var(--body-font);
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Right Section */
+.nav-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-social a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--text-dark);
+}
