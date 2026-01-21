@@ -1,7 +1,14 @@
+/* PAGE BACKGROUND */
+.home {
+  background-color: #F9F6F1; /* cream */
+}
+
+/* HERO SECTION */
 .hero {
   padding: 2.5rem 3rem;
 }
 
+/* IMAGE PLACEHOLDER */
 .image-placeholder {
   height: 320px;
   background-color: #e2e2e2;
@@ -11,24 +18,127 @@
   color: #777;
   font-family: var(--body-font);
   letter-spacing: 0.5px;
+  animation: fadeIn 1.2s ease;
 }
 
-/* Brand Box */
+/* BRAND BOX */
 .brand-box {
+  position: relative;
   background-color: var(--sage);
   margin: 3rem auto;
-  padding: 3rem;
+  padding: 3.5rem 3rem;
   max-width: 900px;
   text-align: center;
+  border-radius: 14px;
+  overflow: hidden;
+  animation: fadeUp 1s ease;
 }
 
+/* Butterfly Layer */
+.butterfly-layer {
+  position: relative;
+  max-width: 1200px;
+  margin: -10px auto 0; /* moved DOWN */
+  height: 120px;
+  pointer-events: none;
+}
+
+/* Common butterfly styles */
+.butterfly {
+  position: absolute;
+  width: 115px; /* slightly bigger */
+  background: transparent;
+  animation: floatButterfly 6s ease-in-out infinite;
+}
+
+/* Left butterfly */
+.butterfly-left {
+  left: 0;
+  transform: rotate(-6deg);
+}
+
+/* Right butterfly */
+.butterfly-right {
+  right: 0;
+  transform: rotate(6deg);
+  animation-delay: 1.5s;
+}
+
+/* Soft floating animation */
+@keyframes floatButterfly {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
+
+
+/* TEXT */
 .brand-box h1 {
+  font-family: var(--heading-font);
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .brand-box p {
   max-width: 720px;
-  margin: auto;
+  margin: 0 auto 2rem;
   font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: var(--body-font);
+}
+
+/* SHOP BUTTON */
+.shop-btn {
+  background-color: var(--lavender);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2.2rem;
+  font-family: var(--heading-font);
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
