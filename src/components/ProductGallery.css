@@ -1,0 +1,22 @@
+.gallery {
+  position: relative;
+  max-width: 420px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.left { left: -25px; }
+.right { right: -25px; }

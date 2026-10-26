@@ -3,23 +3,36 @@
   background-color: #F9F6F1; /* cream */
 }
 
+
 /* HERO SECTION */
 .hero {
-  padding: 2.5rem 3rem;
+  padding: 1.5rem 2rem;
 }
 
-/* IMAGE PLACEHOLDER */
-.image-placeholder {
+/* HOMEPAGE FASHION BANNER */
+.hero-banner {
+  display: block;
+  width: 100%;
   height: 320px;
-  background-color: #e2e2e2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-family: var(--body-font);
-  letter-spacing: 0.5px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
   animation: fadeIn 1.2s ease;
 }
+
+/* RESPONSIVE BANNER */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero-banner {
+    height: 220px;
+    object-position: center;
+    border-radius: 6px;
+  }
+}
+
 
 /* BRAND BOX */
 .brand-box {

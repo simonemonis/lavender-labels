@@ -1,0 +1,156 @@
+
+/* Product Page */
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 65px;
+  align-items: start;
+  color: #403a37;
+  background-color: #f9f6f1;
+  min-height: 70vh;
+}
+
+/* Product Image Area */
+.product-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #eee7e1;
+  border: 1px solid #e4d9d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image-placeholder span {
+  color: #8b7b72;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Product Details */
+.product-info {
+  padding-top: 20px;
+}
+
+.product-info h1 {
+  margin: 0 0 14px;
+  color: #403a37;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.product-price {
+  margin: 0 0 35px;
+  color: #6c5a53;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+}
+
+.product-info h3 {
+  margin: 0 0 15px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Size Options */
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.sizes button {
+  width: 48px;
+  height: 46px;
+  border: 1px solid #d8c8be;
+  background-color: transparent;
+  color: #403a37;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sizes button:hover {
+  border-color: #8b786e;
+}
+
+.sizes button.active {
+  background-color: #d8c8be;
+  border-color: #b9a59a;
+  color: #332b27;
+}
+
+.size-link {
+  display: inline-block;
+  margin: 5px 0 20px;
+  color: #716057;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.size-link:hover {
+  color: #a28b7d;
+}
+
+.product-info > p:last-child {
+  font-size: 13px;
+  color: #716057;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+  .product-page {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px 50px;
+  }
+
+  .product-image-placeholder {
+    aspect-ratio: 4 / 4.5;
+    max-height: 520px;
+  }
+
+  .product-info {
+    padding-top: 0;
+  }
+
+  .product-info h1 {
+    font-size: 34px;
+  }
+
+  .product-price {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-page {
+    padding: 22px 15px 40px;
+  }
+
+  .product-info h1 {
+    font-size: 30px;
+  }
+
+  .sizes {
+    gap: 8px;
+  }
+
+  .sizes button {
+    width: 44px;
+    height: 42px;
+  }
+}
