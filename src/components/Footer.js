@@ -1,3 +1,4 @@
+
 import "./Footer.css";
 import logo from "../assets/logo1.png";
 import messageIcon from "../assets/message.png";
@@ -15,20 +16,29 @@ export default function Footer() {
           <img src={logo} alt="Lavender Labels logo" />
         </div>
 
-        {/* Shop */}
+        {/* Shop Categories */}
         <div className="footer-section">
-          <h4>Shop</h4>
-          <p className="footer-muted">Categories coming soon</p>
+          <h4>
+            <Link to="/shop" className="footer-shop-heading">
+              Shop Now
+            </Link>
+          </h4>
+
+          <ul className="footer-category-links">
+            <li><Link to="/shop/tops">Tops</Link></li>
+            <li><Link to="/shop/shirts">Shirts</Link></li>
+            <li><Link to="/shop/trousers">Trousers</Link></li>
+            <li><Link to="/shop/co-ords">Co-ords</Link></li>
+          </ul>
         </div>
 
         {/* Navigation */}
         <ul>
-  <li><Link to="/">Home</Link></li>
-  <li><Link to="/shop">Shop Now</Link></li>
-  <li><Link to="/about">About</Link></li>
-  <li><Link to="/contact">Contact</Link></li>
-</ul>
-
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/shop">Shop Now</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
 
         {/* Contact */}
         <div className="footer-section">

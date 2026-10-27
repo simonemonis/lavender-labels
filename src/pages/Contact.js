@@ -17,7 +17,7 @@ export default function Contact() {
             <div className="contact-box">
               <h3>Message</h3>
               <p>+971 52 202 7442</p>
-              <p>+971 55 459 7032</p>
+              <p>+971 55 459 7034</p>
             </div>
 
             <div className="contact-box">

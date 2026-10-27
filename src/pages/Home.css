@@ -64,29 +64,43 @@
   animation: floatButterfly 6s ease-in-out infinite;
 }
 
-/* Left butterfly */
+
+/* Left butterfly — faces right */
 .butterfly-left {
   left: 0;
-  transform: rotate(-6deg);
+  animation-name: floatButterflyLeft;
 }
 
-/* Right butterfly */
+/* Right butterfly — faces left */
 .butterfly-right {
   right: 0;
-  transform: rotate(6deg);
+  animation-name: floatButterflyRight;
   animation-delay: 1.5s;
 }
 
-/* Soft floating animation */
-@keyframes floatButterfly {
+/* Left butterfly floating animation */
+@keyframes floatButterflyLeft {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0) scaleX(-1) rotate(-6deg);
   }
   50% {
-    transform: translateY(-10px) rotate(2deg);
+    transform: translateY(-10px) scaleX(-1) rotate(-4deg);
   }
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0) scaleX(-1) rotate(-6deg);
+  }
+}
+
+/* Right butterfly floating animation */
+@keyframes floatButterflyRight {
+  0% {
+    transform: translateY(0) scaleX(1) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-10px) scaleX(1) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) scaleX(1) rotate(6deg);
   }
 }
 
